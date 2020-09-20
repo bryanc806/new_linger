@@ -1,6 +1,6 @@
 This is a project to replace the firmware on a Linger Enterprises 65/9028 video terminal from the mid-80s.
 
-See the article in MicroCornicopia, and various adds in electronics magazines at the time:
+See the article in MicroCornucopia, and various adds in electronics magazines at the time:
 
 https://usermanual.wiki/Document/MicroCornucopia2323Apr85.575398179/view
 
@@ -13,4 +13,16 @@ I've had this since the '80s, but recently pulled it back out to tinker with.  I
 The original could easily keep up with it's maximum baud rate of 19200 baud without having to use flow control (~1920 characters per second); however, by modifying the board slightly and simplifying the firmware (E.g. removing printer support, extra emulations etc), and bumping the CPU clock rate, I was able to get it to easily work at 8000 characters per second at 115200 baud.  This obviously requires flow control, but makes the terminal much more usable.
 
 A video of this in action along with my explainations is at https://youtu.be/DRY504ln2-A
+
+Dependencies:
+
+You will need cc65.
+
+Building:
+
+Building is done with build.sh.  The sbc.cfg file defines the various memory regions.  I use a 256kbit eeprom, so I end up concatenating the a.out file with itself to make the final image to burn to the eeprom.
+
+
+
+
 
