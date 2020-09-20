@@ -22,7 +22,8 @@ Building:
 
 Building is done with build.sh.  The sbc.cfg file defines the various memory regions.  I use a 256kbit eeprom, so I end up concatenating the a.out file with itself to make the final image to burn to the eeprom.
 
+TBD:
 
-
+The vt100 emulation is not complete; it works for top and MicroEmacs, but not for vi.  I suspect this is to do with inserting and deleting lines and or scrolling regions.
 
 
